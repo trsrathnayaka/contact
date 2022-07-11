@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>Business Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <style>
+        
+       * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 100px;
+    }
+    
+    .container:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 130%;
+        left: 0;
+        top: 0;
+        background: url("1.jpg") no-repeat center; 
+        background-size: cover;
+        filter: blur(0px);
+        z-index: -1;
+    }
+    
+    .contact-box {
+        margin-top: 40px;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(239, 64, 255, 0.404);
+        box-shadow: 10px 10px 20px 8px rgba(255, 10, 222, 0.664);
+    }
+    
+    .left {
+        background: url("5.png") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+    
+     .right {
+        padding: 25px 50px;
+    }
+    
+    
+    h2 {
+        position: relative;
+        padding: 0 0 10px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    
+    h2:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 50px;
+        border-radius: 2px;
+        background-color: #fffb00;
+    }
+    
+    
+    .field {
+        width: 100%;
+        border: 2px solid rgba(255, 0, 0, 0.062);
+        outline: none;
+        background-color: rgba(233, 250, 255, 0.596);
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: .3s;
+    }
+    
+    .field:hover {
+        background-color: rgba(255, 255, 255, 0.582);
+    }
+    
+    textarea {
+        min-height: 90px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background-color: #ff0000;
+        color: #fff;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .btn:hover {
+        background-color: #ff4800;
+    }
+    
+      .field:focus {
+        border: 2px solid rgba(30, 85, 250, 0.47);
+        background-color: rgba(255, 255, 255, 0.788);
+    }
+    
+     @media screen and (max-width: 880px) {
+        .contact-box {
+            grid-template-columns: 1fr;
+        }
+        .left {
+            height: 200px;
+        }
+    }
+  
+    </style> 
+   
+    <body>
+       
+         <form action="bussinesServlet " method="post">
+             
+             <div class="container">
+             <div class="lapz">
+        
+        
+            <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Application Form</h2>
+                
+             <input type="text" name="Name" class="field" placeholder="Your Name"  value="" />
+             <input type="text" name="E-mail" class="field" placeholder="Your Email"  value="" />
+             <input type="text" name="Phone" class="field" placeholder="Phone"  value="" />
+             <textarea name="Massage" placeholder="Message" class="field"></textarea>
+                    
+             <button class="btn">Send</button>
+                     
+            </div>
+            </div>
+            </div>
+            </div>
+         </form>
+    </body>
+              
+</html>
